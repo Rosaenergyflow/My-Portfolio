@@ -1,0 +1,49 @@
+/*--------------------------------------------------------------
+  Colors & fonts
+--------------------------------------------------------------*/
+.colores{
+  color: #0084ff;
+  color: #5a5a5a;
+  color: black;
+  
+}
+.fonts{
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Orbitron', sans-serif;
+}
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+
+body {
+  background-color: black !important;
+}
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color:#0b0e23;
+  }
+
+  /* configuracion general para las imagenes de fondo (algunas imagenes tienen parte de su configuracion en el archivo CSS de su componente)*/
+  .bg-image {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  @media (max-width: 1024px) {
+    .bg-image {
+      background-attachment: scroll;
+    }
+  }
+  
+  .paralax {
+    background-image:url("assets/img/overlay-bg.jpg");
+    position: relative;
+  }

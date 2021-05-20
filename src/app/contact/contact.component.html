@@ -1,0 +1,147 @@
+<!-- ======= Contact Section ======= -->
+<section class="contact paralax bg-image">
+  <div class="overlay"></div>
+  <div class="container-fluid">
+    <div id="contact" class="row d-flex justify-content-sm-center justify-content-beetwen">
+
+      <div class="form-box row col-12 col-md-6 m-0">
+        <h5 class="col-12">
+          Contact me
+        </h5>
+       
+        <form [formGroup]="contactForm" (ngSubmit)="enviar()">
+          <div class="row">
+
+            <div class="col-md-12 mb-3">
+              <div class="form-group">
+                
+                <input type="text" class="form-control" name="name" placeholder="Your Name" formControlName="name"
+                  [ngClass]="{'is-invalid': contactForm.get('name')?.touched && (contactForm.get('name')?.dirty && contactForm.get('name')?.invalid) }" />
+               
+                <div class="invalid-feedback">
+                  <span *ngIf="contactForm.get('name')?.errors?.required">Please enter a name</span>
+                  <span *ngIf="contactForm.get('name')?.errors?.minlength">
+                    Name must be longer {{ contactForm.get('name')?.errors?.minlength?.requiredLength | json}}
+                    letters
+                  </span>
+                  <span *ngIf="contactForm.get('name')?.errors?.maxlength">
+                    Name cannot be longer than {{ contactForm.get('name')?.errors?.maxlength?.requiredLength |
+                    json}} letters
+                  </span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-md-12 mb-3">
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" placeholder="Your Email" formControlName="email"
+                  [ngClass]="{'is-invalid': contactForm.get('email')?.touched && (contactForm.get('email')?.dirty && contactForm.get('email')?.invalid) }" />
+                <div class="invalid-feedback">
+                  <!-- Errores: {{ contactForm.get('email')?.errors | json}} -->
+                  <span *ngIf="contactForm.get('email')?.errors?.required">
+                    Please enter a email
+                  </span>
+                  <span *ngIf="contactForm.get('email')?.errors?.pattern">
+                    Please enter a valid email
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12 mb-3">
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" placeholder="Subject" formControlName="subject"
+                  [ngClass]="{'is-invalid': contactForm.get('subject')?.touched && (contactForm.get('subject')?.dirty && contactForm.get('subject')?.invalid) }" />
+                <div class="invalid-feedback">
+                  <span *ngIf="contactForm.get('subject')?.errors?.required">Please enter a subject</span>
+                  <span *ngIf="contactForm.get('subject')?.errors?.minlength">
+                    Subject must be longer {{ contactForm.get('subject')?.errors?.minlength?.requiredLength |
+                    json}} letters
+                  </span>
+                  <span *ngIf="contactForm.get('subject')?.errors?.maxlength">
+                    Subject cannot be longer than {{
+                    contactForm.get('subject')?.errors?.maxlength?.requiredLength | json}} letters
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="form-group">
+                <textarea class="form-control" name="message" placeholder="Message" formControlName="message"
+                  [ngClass]="{'is-invalid': contactForm.get('message')?.touched && (contactForm.get('message')?.dirty && contactForm.get('message')?.invalid) }"></textarea>
+                <div class="invalid-feedback">
+                  <span *ngIf="contactForm.get('message')?.errors?.required">Please enter a message</span>
+                  <span *ngIf="contactForm.get('message')?.errors?.minlength">
+                    Message must be longer {{ contactForm.get('message')?.errors?.minlength?.requiredLength |
+                    json}} letters
+                  </span>
+                  <span *ngIf="contactForm.get('message')?.errors?.maxlength">
+                    Message cannot be longer than {{
+                    contactForm.get('message')?.errors?.maxlength?.requiredLength | json}} letters
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12 text-center py-4">
+              <button type="submit" class="btn btn-lg form-button" [disabled]="contactForm.invalid">
+                Send Message
+              </button>
+            </div>
+
+
+            
+            <div class="col-12 d-flex justify-content-center" *ngIf="send">
+              <span class="message-successfully px-4 py-2 ">
+                Your message has been sent successfully <i class="fa fa-smile-o" aria-hidden="true"></i>
+              </span>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+      <div class="info-box row col-12 col-md-6 m-0 mt-4 mb-auto mt-md-0 d-flex justify-content-center info">
+        <h5 class="col-12">
+          Contact info
+        </h5>
+
+        <div class="row col-12 d-flex justify-content-center info-content">
+          <p class="col-12 d-flex align-items-center justify-content-center justify-content-md-start">
+            Contact me directly
+          </p>
+
+          <ul class="col-12 list-info">
+            <li><span class="location"></span>Ventalló street, Barcelona 08025</li>
+            <li><span class="telephone"></span> +34 656 83 83 24</li>
+            <li><span class="email"></span> info@rosamariabj.com</li>
+            <li><span class="email"></span> rosamariabj.dev@gmail.com</li>
+          </ul>
+        </div>
+
+        <ul class="socials col-12 d-flex align-items-center justify-content-center justify-content-md-start m-0 mt-4">
+          <li>
+            <span class="socials-circle d-flex justify-content-center align-items-center">
+              <a href="https://github.com/Rosaenergyflow" target="_blank">
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </a>
+            </span>
+          </li>
+
+          <li>
+            <span class="socials-circle d-flex justify-content-center align-items-center">
+              <a href="https://www.linkedin.com/in/rosamariabj/" target="_blank">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+<!-- End Contact Section -->

@@ -1,0 +1,65 @@
+<div id="contentHeader">
+  <!-- ======= Intro Section ======= -->
+  <div id="home" class="intro bg-Header bg-image">
+    <div class="w-100 container-titles d-flex align-items-center justify-content-center text-center">
+      <div class="overlay-intro"></div>
+      <div>
+        <h1 class="w-100 intro-title" @titleAnimation>{{title}}</h1>
+        <p class="w-100 intro-subtitle" @subtitleAnimation>{{subtitle}}</p>
+      </div>
+    </div>
+  </div><!-- End Intro Section -->
+  <div >
+
+    <!-- ======= Header/ Navbar ======= -->
+    <div class="container p-0 m-0">
+    <nav id="mainNav" class="navbar fixed-top" [ngClass]="{'navbar-expand-md': scrollPosition==0 , 'bgNav': burguerOpen==true}">
+        <a id="navBrand" class="navbar-brand" href="https://github.com/Rosaenergyflow" target="_blank">
+          <span class=" d-flex align-items-center">
+            VISIT MY GITHUB <i class="fa fa-github iconGitHub ml-2" aria-hidden="true"></i>
+          </span>
+        </a>
+
+        <button id="botonBurguer" class="botonBurguer navbar-toggler collapsed" (click)="displayNav()" 
+        type="button" data-toggle="collapse" data-target="#navbarDefault" 
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <i id="burguerIcon" class="botonBurguer fa fa-bars iconBurguer"  aria-hidden="true"
+          [ngClass]="{'fa-times': burguerOpen==true,'fa-bars': burguerOpen==false}"></i>
+        </button>
+        
+        <div  id="navbarDefault" class="navbar-collapse collapse justify-content-end"
+        [ngClass]="{'displayNav': burguerOpen==true}">
+          <ul class="navbar-nav">
+            <li class="nav-item mr-2">
+              <a id="homeLink" class="nav-link" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item mr-2">
+              <a id="aboutLink" class="nav-link" href="#about">ABOUT ME</a>
+            </li>
+
+            <li class="nav-item mr-2">
+              <a id="workLink" class="nav-link" href="#works">WORKS</a>
+            </li>
+
+            <li class="nav-item mr-2">
+              <a id="testimonialsLink" class="nav-link" href="#testimonials">TESTIMONIALS</a>
+            </li>
+
+            <li class="nav-item">
+              <a id="contactLink" class="nav-link" href="#contact">CONTACT</a>
+            </li>
+
+           
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+
+</div>
+
+
+<a class="d-flex justify-content-center align-items-center" [ngClass]="{'back-top': scrollPosition>0}" style="display: none;" href="#">
+  <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+</a>

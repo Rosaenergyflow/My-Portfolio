@@ -1,0 +1,216 @@
+
+  /*--------------------------------------------------------------
+  # Intro Section
+  --------------------------------------------------------------*/
+  .intro {
+    height: 100vh;
+    position: relative;
+  }
+  
+  .intro .overlay-intro {
+    overflow: hidden;
+    background-color:black;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+  }
+  
+  .intro .intro-title,
+  .intro .intro-subtitle{
+    font-family: 'Orbitron', sans-serif;  
+    color: white;
+    position:relative;
+    z-index: 1;
+  }
+
+  .intro .intro-title {
+    font-weight: 700;
+    font-size: 3rem;
+  }
+  
+  .intro .intro-subtitle {
+    font-size: 2rem;
+  }
+
+
+@media(max-width:510px){
+  .intro .intro-title {
+    font-size: 2.6rem;
+  }
+  
+  .intro .intro-subtitle {
+    font-size: 1.6rem;
+  }
+}
+@media(max-width:410px){
+  .intro .intro-title {
+    font-size: 2.4rem;
+  }
+  
+  .intro .intro-subtitle {
+    font-size: 1.4rem;
+  }
+}
+  
+@media(max-width:410px){
+  .intro .intro-title {
+    font-size: 2rem;
+  }
+  
+  .intro .intro-subtitle {
+    font-size: 1rem;
+  }
+}
+  
+/*--------------------------------------------------------------
+  # Titles
+  --------------------------------------------------------------*/
+.container-titles{
+  height: 100%;
+  overflow: hidden;
+}
+/*--------------------------------------------------------------
+  # Background-image
+--------------------------------------------------------------*/
+.bg-Header{
+  background-image: url("/assets/img/intro-bg.jpg");
+}
+
+@media (max-width: 1024px) {
+  .bg-Header {
+    background-position: 30% 50%;
+  }
+} 
+
+/*--------------------------------------------------------------
+  # Nav Bar
+--------------------------------------------------------------*/
+nav{
+    background-color: #00000096;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .nav-item {
+    position: relative;
+  }
+
+  .nav-link,
+  .navbar-brand{
+    font-family: 'Orbitron', sans-serif; 
+  }
+
+  .navbar-brand:hover,
+  .navbar-brand:hover .iconGitHub {
+    color: #0084ff;
+    font-weight: 600;
+  }
+ 
+  .nav-link:before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    bottom: 0;
+    height: 2px;
+    transition: all 400ms ease;
+  }
+  
+  .nav-link:hover:before {
+    width: 50px;
+  }
+  
+  .nav-link.show:before,
+  .nav-link.active:before{
+    width: 15px;
+  }
+  
+  .nav-link:before {
+    background-color: #0084ff;
+  } 
+   
+
+   .nav-link:hover {
+    color: #0084ff;
+  }
+ 
+  .navbar-toggler:focus,
+  .navbar-toggler:active {
+    outline: 0;
+  }
+
+  .nav-link,
+  .navbar-brand,
+  .iconGitHub {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color:  white;
+  }
+  
+   
+  .iconGitHub{
+    font-size: 1.5rem !important;
+  }
+
+  @media (min-width: 870px) and (max-width: 993px) { 
+    .nav-link,
+    .navbar-brand,
+    .iconGitHub {
+      font-size: 0.9rem;
+    }
+  }    
+
+  @media (min-width: 0px) and (max-width: 869px) { 
+    .nav-link,
+    .navbar-brand,
+    .iconGitHub {
+      font-size: 0.8rem;
+    }
+  }    
+
+  
+  
+  
+/*--------------------------------------------------------------
+  # Boton burguer
+  --------------------------------------------------------------*/
+.iconBurguer{
+  font-size: 2rem;
+}
+
+.displayNav{
+  display:block;
+}
+#botonBurguer{
+  color:  white;
+}
+#botonBurguer:hover{
+  color:#0084ff;
+}
+.bgNav{
+  background-color:  black !important;
+}
+
+ /*--------------------------------------------------------------
+  # Back button
+  --------------------------------------------------------------*/
+.back-top {
+  position: fixed;
+  display: none;
+  width: 60px;
+  height: 60px;
+  right: 1.25%;
+  bottom: 1%;
+  color: white;
+  transition: display 0.7s ease-in-out;
+  z-index: 99999;
+}
+.back-top i {
+  font-size: 35px;
+  position: absolute;
+}

@@ -1,0 +1,93 @@
+/*--------------------------------------------------------------
+  # About
+  --------------------------------------------------------------*/
+  .about {
+    color: #5a5a5a;
+  }
+  .profile-img{
+    box-shadow: 1px 1px 1px #0b0e23;
+  }
+  @media ( min-width:576px ) and ( max-width: 650px ) {
+    .profile-img{
+    width: 90%;
+    }
+  }
+  
+  .secondaryTitle {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #0084ff;
+    font-size: 0.95rem;
+  }
+
+  .about-me h5{
+    color:  #0084ff;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+  }
+  
+  .details,
+  .about-me p,
+  .skill ul{
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .details{
+    font-size: 0.85rem;
+  }
+
+  .about-me{
+    text-align: justify;
+  }
+  .about-me p{
+    font-size: 1rem;
+  }
+  
+  .box-about-me {
+    position: relative;
+    background-color:  white;
+    margin-bottom: 3rem;
+    z-index: 2;
+   
+  }
+  .about-content{
+    padding-left: 5.5%;
+    padding-right: 5.5%;
+    padding-top: 4.5%;
+    padding-bottom: 4.5%;
+  }
+  .skill ul{
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+  }
+  @media ( max-width:767px ) {
+    .skill span , .about-me p{
+      font-size: 0.85rem;
+    }
+   
+  }
+  @media(max-width:340px){
+    .about-me h5 {
+      font-size: 1.2rem;
+    }
+    .profile-img{
+      width: 50%;
+      height: auto;
+    }
+    .secondaryTitle {
+      font-size: 0.8rem;
+    }
+    .details{
+      padding-left: 10%;
+      font-size: 0.82rem;
+    }
+    .about-me p{
+      font-size: 0.82rem;
+    }
+  }
+  
+   

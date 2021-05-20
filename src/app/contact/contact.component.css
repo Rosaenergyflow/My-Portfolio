@@ -1,0 +1,112 @@
+/* contact componente general */
+.contact{
+  padding-top: 2.8%;
+  padding-bottom: 2.8%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+@media (max-width:767px){
+  .contact{
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .info{
+    margin-top: 3rem;
+  }
+}
+
+.contact h5{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  line-height: 2.2rem;
+  color:  white;
+  background-color: black;
+}
+/* boton formulario contact */
+.form-button{
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  background-color:black;
+  border: 2px solid  white;
+  color:white;
+}
+/* info contacto */
+.info p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+}
+.info{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  color: white;
+  padding-bottom: 0rem;
+  padding-top: 0rem;
+}
+
+.info-content{
+  padding-top: 4%;
+  background-color:blackdb;
+  height: auto;
+}
+
+.list-info {
+  list-style:none;
+  line-height: 2.5;
+}
+
+/* Redes sociales */
+.socials li {
+  display: inline-block;
+  list-style: none;
+  padding-left: 0px;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+.socials .socials-circle{
+  height: 35px;
+  width: 35px;
+  font-size: 1.6rem;
+  display: block;
+  border-radius: 50%;  
+  background-color: white;
+  box-shadow: 0 0 0 3px  black;
+  transition: all 500ms ease;
+}
+@media(max-width:575px){
+  .form-box{
+    padding-left:  2rem !important;
+    padding-right:  2rem !important;
+  }
+}
+.socials i{
+  color:  black;
+  transition: all 500ms ease;
+}
+
+.socials li:hover i{
+  color:  #0084ff;
+}
+.socials li:hover .socials-circle{
+  background-color: blackcd;
+  box-shadow: 0 0 0 3px   #0084ff;
+}
+/* Mensaje enviado */
+.message-successfully{
+  font-family: 'Mandali', sans-serif;
+  font-size: 1.05rem;
+  color: white;
+  background-color: #0084ffc4;
+}
+.overlay{
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+}
