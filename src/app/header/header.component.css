@@ -9,7 +9,7 @@
   
   .intro .overlay-intro {
     overflow: hidden;
-    background-color:black;
+    background-color:#6d696973;
     position: absolute;
     z-index: 0;
     top: 0;
